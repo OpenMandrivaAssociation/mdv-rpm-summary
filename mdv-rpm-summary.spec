@@ -5,7 +5,6 @@ Release:	%mkrel 1
 Source0:	%name-%version.tar.bz2
 License:	GPL
 Group:		System/Internationalization
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	gettext
 BuildArchitectures: noarch
 
