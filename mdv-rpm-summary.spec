@@ -1,7 +1,7 @@
 Summary:	Localization files for packages summaries
 Name:		mdv-rpm-summary
-Version:	0.7
-Release:	%mkrel 2
+Version:	0.8
+Release:	%mkrel 1
 Source0:	%name-%version.tar.bz2
 License:	GPL
 Group:		System/Internationalization
@@ -17,23 +17,16 @@ They are used by rpmdrake.
 %setup -q
 
 %build
-%make
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std PREFIX=%buildroot/
 
-for i in rpm-summary-contrib rpm-summary-devel rpm-summary-main; do 
-%find_lang $i
-done
-cat rpm-summary-contrib.lang rpm-summary-devel.lang >> rpm-summary-main.lang 
+%find_lang %name rpm-summary-contrib rpm-summary-devel rpm-summary-main rpm-summary-non-free
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
-%files -f rpm-summary-main.lang 
+%files -f %name.lang 
 %defattr(-,root,root,0755)
-%{_datadir}/locale/*/*
-
-
