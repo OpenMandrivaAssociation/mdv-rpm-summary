@@ -1,7 +1,7 @@
 Summary:	Localization files for packages summaries
 Name:		mdv-rpm-summary
-Version:	0.9.3
-Release:	%mkrel 3
+Version:	0.9.4
+Release:	%mkrel 1
 Source0:	%name-%version.tar.bz2
 License:	GPL
 Group:		System/Internationalization
