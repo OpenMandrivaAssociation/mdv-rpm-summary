@@ -20,13 +20,13 @@ They are used by rpmdrake.
 make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std PREFIX=%buildroot/
 
 %find_lang %name rpm-summary-contrib rpm-summary-devel rpm-summary-main rpm-summary-non-free
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f %name.lang 
 %defattr(-,root,root,0755)
