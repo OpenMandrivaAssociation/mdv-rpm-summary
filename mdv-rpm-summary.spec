@@ -1,7 +1,7 @@
 Summary:	Localization files for packages summaries
 Name:		mdv-rpm-summary
 Version:	0.9.4
-Release:	5
+Release:	6
 Source0:	%{name}-%{version}.tar.bz2
 License:	GPL
 Group:		System/Internationalization
@@ -22,8 +22,6 @@ make
 %makeinstall_std PREFIX=%{buildroot}/
 
 %find_lang rpm-summary-contrib rpm-summary-devel rpm-summary-main rpm-summary-non-free %{name}.lang
-
-%clean
 
 %files -f %{name}.lang 
 %defattr(-,root,root,0755)
